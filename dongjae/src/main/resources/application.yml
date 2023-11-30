@@ -12,6 +12,9 @@ eureka:
     nonSecurePortEnabled: false
     securePortEnabled: true
     securePort: 443
+    statusPageUrl: https://port-0-dongjae-cf24lcem0udh.gksl2.cloudtype.app/actuator/info
+    homePageUrl: https://port-0-dongjae-cf24lcem0udh.gksl2.cloudtype.app/
+
   client:
     register-with-eureka: true
     fetch-registry: true
