@@ -19,15 +19,10 @@ public class JaehwaRibbonTemplate {
 
     public String getTest(String id) {
         System.out.println("before");
-        List<ServiceInstance> instances = discoveryClient.getInstances("joonbum");
-        System.out.println("after");
-        System.out.println(instances.size());
-        if (instances.size()==0) return null;
         /** 인스턴스들 중 0번째 클라이언트에 요청 */
-        String serviceUri = String.format("%s/test/%s",instances.get(0).getUri().toString(), id);
         ResponseEntity<String> restExchange =
                 /** Url : http://{applicationId}/v1/ ~~ */
-                restTemplate.exchange("http://joonbum/test/{id}"
+                restTemplate.exchange("http://jaehwaplz/test/{id}"
                         , HttpMethod.GET, null, String.class, id);
         System.out.println("getTestpass");
         System.out.println(restExchange.getBody());
