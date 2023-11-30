@@ -8,11 +8,12 @@ spring:
 eureka:
   instance:
     prefer-ip-address: true
+    hostname:
   client:
     register-with-eureka: true # ??? ???? (???) ?? ??
     fetch-registry: true
     serviceUrl:
-      defaultZone: https://port-0-test-cf24lcem0udh.gksl2.cloudtype.app/eureka/
+      defaultZone: https://port-0-demo-32updzt2alpkqeavd.sel4.cloudtype.app/eureka/
 
 management:
   endpoints:
