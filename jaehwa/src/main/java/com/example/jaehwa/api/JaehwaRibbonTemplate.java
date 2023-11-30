@@ -25,11 +25,9 @@ public class JaehwaRibbonTemplate {
         if (instances.size()==0) return null;
         /** 인스턴스들 중 0번째 클라이언트에 요청 */
         String serviceUri = String.format("%s/test/%s",instances.get(0).getUri().toString(), id);
-        System.out.println(serviceUri);
         ResponseEntity<String> restExchange =
                 /** Url : http://{applicationId}/v1/ ~~ */
-
-                restTemplate.exchange(serviceUri
+                restTemplate.exchange("http://joonbum/test/{id}"
                         , HttpMethod.GET, null, String.class, id);
         System.out.println("getTestpass");
         System.out.println(restExchange.getBody());

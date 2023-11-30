@@ -1,8 +1,8 @@
 server:
-  port: 8011
+  port: 8015
 spring:
   application:
-    name: jaehwa
+    name: plz
 
 eureka:
   instance:
