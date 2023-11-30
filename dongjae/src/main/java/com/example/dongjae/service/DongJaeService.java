@@ -1,6 +1,6 @@
-package com.example.service;
+package com.example.dongjae.service;
 
-import com.example.api.DongJaeRibbonTemplate;
+import com.example.dongjae.api.DongJaeRibbonTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,5 @@
 server:
   port: 8013
-  address: 0.0.0.0
 spring:
   application:
     name: dongjae
@@ -8,8 +7,10 @@ spring:
 eureka:
   instance:
     prefer-ip-address: true
+    ##각자 클라우드 타입 ip-address에 주소 입력?
+    ip-address: https://port-0-test-cf24lcem0udh.gksl2.cloudtype.app/
   client:
-    register-with-eureka: true # ??? ???? (???) ?? ??
+    register-with-eureka: true
     fetch-registry: true
     serviceUrl:
       defaultZone: https://port-0-test-cf24lcem0udh.gksl2.cloudtype.app/eureka/
