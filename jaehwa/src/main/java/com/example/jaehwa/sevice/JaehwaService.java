@@ -10,6 +10,7 @@ public class JaehwaService {
     private JaehwaRibbonTemplate jaehwaRibbonTemplate;
 
     public String ribbon(String id) {
+        System.out.println("ribbon pass " + id);
         return jaehwaRibbonTemplate.getTest(id);
     }
 

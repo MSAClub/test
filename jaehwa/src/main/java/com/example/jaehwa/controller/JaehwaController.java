@@ -14,6 +14,7 @@ public class JaehwaController {
 
     @GetMapping(value = "/test/{id}")
     public String test(@PathVariable String id) {
+        System.out.println("controller pass");
         return jaehwaService.ribbon(id);
     }
 }
