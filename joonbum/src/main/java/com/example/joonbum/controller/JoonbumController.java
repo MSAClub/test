@@ -16,6 +16,7 @@ public class JoonbumController {
 
     @GetMapping("/test/{id}")
     public String test(@PathVariable String id){
-        return joonbumService.getTest(id);
+        return id + "joonbum";
+//        return joonbumService.getTest(id);
     }
 }
