@@ -8,7 +8,6 @@ import org.springframework.web.client.RestTemplate;
 
 @Component
 public class ZuheeRibbonTemplate {
-
     @Autowired
     RestTemplate restTemplate;
 
@@ -18,7 +17,7 @@ public class ZuheeRibbonTemplate {
         ResponseEntity<String> restExchange =
                 /** Url : http://{applicationId}/v1/ ~~ */
 
-                restTemplate.exchange("http://jaehwa/test/{id}"
+                restTemplate.exchange("http://jaehwa:jaehwa:8011/test/{id}"
                         , HttpMethod.GET, null, String.class, id);
 
         return id + " is " + restExchange.getBody();
