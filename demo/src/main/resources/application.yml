@@ -3,7 +3,7 @@ server:
 spring:
   application:
     name: service-discovery
-`
+
 eureka:
   client:
     register-with-eureka: false # 유레카 서비스에 (자신을) 등록 여부
