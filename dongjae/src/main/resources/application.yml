@@ -9,6 +9,9 @@ eureka:
     prefer-ip-address: true
     ##각자 클라우드 타입 ip-address에 주소 입력?
     ip-address: port-0-dongjae-cf24lcem0udh.gksl2.cloudtype.app
+    nonSecurePortEnabled: false
+    securePortEnabled: true
+    securePort: 443
   client:
     register-with-eureka: true
     fetch-registry: true
