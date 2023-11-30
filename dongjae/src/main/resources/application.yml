@@ -8,7 +8,7 @@ eureka:
   instance:
     prefer-ip-address: true
     ##각자 클라우드 타입 ip-address에 주소 입력?
-    ip-address: https://port-0-test-cf24lcem0udh.gksl2.cloudtype.app/
+    ip-address: port-0-test-cf24lcem0udh.gksl2.cloudtype.app
   client:
     register-with-eureka: true
     fetch-registry: true
