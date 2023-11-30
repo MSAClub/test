@@ -6,7 +6,7 @@ spring:
 
 eureka:
   instance:
-    prefer-ip-address: true
+    prefer-ip-address: false
     ##각자 클라우드 타입 ip-address에 주소 입력?
     ip-address: port-0-dongjae-cf24lcem0udh.gksl2.cloudtype.app
     nonSecurePortEnabled: false
