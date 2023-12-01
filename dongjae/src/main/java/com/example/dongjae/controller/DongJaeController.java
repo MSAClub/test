@@ -15,6 +15,6 @@ public class DongJaeController {
     public String getTest(@PathVariable String id) {
         System.out.println("????");
         System.out.println(id);
-        return dongJaeService.ribbon(id);
+        return id + "dongjae";
     }
 }
