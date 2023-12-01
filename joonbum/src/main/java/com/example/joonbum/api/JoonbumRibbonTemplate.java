@@ -16,7 +16,7 @@ public class JoonbumRibbonTemplate {
         ResponseEntity<String> restExchange =
                 /** Url : http://{applicationId}/v1/ ~~ */
 
-                restTemplate.exchange("http://zuhee/test/{id}"
+                restTemplate.exchange("http://dongjae/test/{id}"
                         , HttpMethod.GET, null, String.class, id);
 
         return id + " is " + restExchange.getBody();

@@ -1,14 +1,20 @@
 server:
   port: 8014
-  address: 0.0.0.0
 spring:
   application:
     name: joonbum
 
 eureka:
   instance:
-    prefer-ip-address: true
-    hostname:
+    prefer-ip-address: false
+    hostname: port-0-test-32updzt2alpkqeavd.sel4.cloudtype.app
+    nonSecurePortEnabled : false
+    securePortEnable : true
+    securePort : 443
+    #유레카에 바인딩된거 눌르면 가는 url
+    statusPageUrl : https://port-0-test-32updzt2alpkqeavd.sel4.cloudtype.app/actuator/info
+    #홈페이지 url
+    homePageUrl : https://port-0-test-32updzt2alpkqeavd.sel4.cloudtype.app/
   client:
     register-with-eureka: true # ??? ???? (???) ?? ??
     fetch-registry: true
