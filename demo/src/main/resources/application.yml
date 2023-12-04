@@ -1,19 +1,25 @@
 server:
-  port: 8761
-  address: 0.0.0.0
-
+  port: 8012
 spring:
   application:
-    name: service-discovery
+    name: zuhee
 
 eureka:
+  instance:
+    prefer-ip-address: false
+    ##각자 클라우드 타입 ip-address에 주소 입력?
+    hostname: port-0-zuhee-57lz2alpkq99la.sel4.cloudtype.app
+    nonSecurePortEnabled: false
+    securePortEnabled: true
+    securePort: 443
+    statusPageUrl: https://port-0-zuhee-57lz2alpkq99la.sel4.cloudtype.app/actuator/info
+    homePageUrl: https://port-0-zuhee-57lz2alpkq99la.sel4.cloudtype.app/
+
   client:
-    register-with-eureka: false # 유레카 서비스에 (자신을) 등록 여부
-    fetch-registry: false  # (유레카 클라이언트 기반) 다른 서비스들의 정보를 fetch 유무
-
-
-  server:
-    wait-time-in-ms-when-sync-empty: 5  # 서버가 요청을 받기 전 대기할 초기 시간(ms) : 거의 대기 없음 (default 5분 : 상용에서는 모든 서비스가 등록 되길 기다리기 위해 5분 후 정보를 공유)
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: https://port-0-test-cf24lcem0udh.gksl2.cloudtype.app/eureka/
 
 management:
   endpoints:
