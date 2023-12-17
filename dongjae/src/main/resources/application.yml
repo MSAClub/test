@@ -6,21 +6,12 @@ spring:
 
 eureka:
   instance:
-    prefer-ip-address: false
-    ##각자 클라우드 타입 ip-address에 주소 입력?
-#    hostname: port-0-dongjae-cf24lcem0udh.gksl2.cloudtype.app
-#    nonSecurePortEnabled: false
-#    securePortEnabled: true
-#    securePort: 443
-#    statusPageUrl: https://port-0-dongjae-cf24lcem0udh.gksl2.cloudtype.app/actuator/info
-#    homePageUrl: https://port-0-dongjae-cf24lcem0udh.gksl2.cloudtype.app/
-#
-#
+
   client:
-    register-with-eureka: false
-    fetch-registry: false
-#    serviceUrl:
-#      defaultZone: https://port-0-test-cf24lcem0udh.gksl2.cloudtype.app/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://18.116.248.2:8761/eureka
 
 #management:
 #  endpoints:
