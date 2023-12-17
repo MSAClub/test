@@ -1,25 +1,17 @@
 server:
-  port: 8012
+  port: 8761
 spring:
   application:
-    name: zuhee
+    name: discovery_server
 
 eureka:
   instance:
-    prefer-ip-address: false
-    ##각자 클라우드 타입 ip-address에 주소 입력?
-    hostname: port-0-zuhee-57lz2alpkq99la.sel4.cloudtype.app
-    nonSecurePortEnabled: false
-    securePortEnabled: true
-    securePort: 443
-    statusPageUrl: https://port-0-zuhee-57lz2alpkq99la.sel4.cloudtype.app/actuator/info
-    homePageUrl: https://port-0-zuhee-57lz2alpkq99la.sel4.cloudtype.app/
-
+    hostname: 18.116.248.2
   client:
-    register-with-eureka: true
-    fetch-registry: true
+    register-with-eureka: false
+    fetch-registry: false
     serviceUrl:
-      defaultZone: https://port-0-test-cf24lcem0udh.gksl2.cloudtype.app/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
 management:
   endpoints:
