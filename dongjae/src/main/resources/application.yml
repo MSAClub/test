@@ -13,9 +13,9 @@ eureka:
     serviceUrl:
       defaultZone: http://18.116.248.2:8761/eureka
 
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: "*"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
