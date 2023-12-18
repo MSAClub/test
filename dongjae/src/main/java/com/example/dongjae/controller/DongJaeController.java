@@ -8,13 +8,22 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DongJaeController {
-    @Autowired
-    DongJaeService dongJaeService;
+//    @Autowired
+//    DongJaeService dongJaeService;
 
     @GetMapping("/test/{id}")
     public String getTest(@PathVariable String id) {
         System.out.println("????");
         System.out.println(id);
         return id + "dongjae";
+    }
+    @GetMapping("")
+    public String test(){
+        return "dongjae";
+    }
+
+    @GetMapping("/asd")
+    public String test2(){
+        return " test2";
     }
 }

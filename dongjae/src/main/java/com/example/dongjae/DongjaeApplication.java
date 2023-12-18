@@ -15,9 +15,9 @@ public class DongjaeApplication {
 		SpringApplication.run(DongjaeApplication.class, args);
 	}
 
-	@LoadBalanced
-	@Bean
-	public RestTemplate getRestTemplate(){
-		return new RestTemplate();
-	}
+//	@LoadBalanced
+//	@Bean
+//	public RestTemplate getRestTemplate(){
+//		return new RestTemplate();
+//	}
 }
