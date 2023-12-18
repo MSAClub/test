@@ -21,4 +21,9 @@ public class DongJaeController {
     public String test(){
         return "dongjae";
     }
+
+    @GetMapping("/asd")
+    public String test2(){
+        return " test2";
+    }
 }
