@@ -17,6 +17,7 @@ public class JaehwaApplication {
 	@LoadBalanced
 	@Bean
 	public RestTemplate getRestTemplate(){
+		System.out.println("?ASDASD");
 		return new RestTemplate();
 	}
 }
