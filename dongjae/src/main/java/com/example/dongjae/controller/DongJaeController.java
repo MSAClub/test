@@ -22,10 +22,7 @@ public class DongJaeController {
         return "dongjae";
     }
 
-    @GetMapping("/asd")
-    public String test2(){
-        return " test2";
-    }
+
 
 
 }
