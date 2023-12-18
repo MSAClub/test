@@ -6,7 +6,7 @@ spring:
 
 eureka:
   instance:
-    hostname: 18.116.248.2
+    hostname: 3.143.74.33
   client:
     register-with-eureka: false
     fetch-registry: false
