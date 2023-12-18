@@ -34,8 +34,4 @@ public class DongJaeController {
     public String test4(){
         return " test2";
     }
-    @GetMapping("/asd4")
-    public String test5(){
-        return " test2";
-    }
 }
