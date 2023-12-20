@@ -1,0 +1,37 @@
+server:
+  port: 80
+  address: 0.0.0.0
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      mvc:
+        enable : false
+      routes:
+        - id : dongjae
+          uri : lb://dongjae
+          predicates:
+            - Path=/dongjae/**
+        - id : jaehwa
+          uri : lb://jaehwa
+          predicates:
+            - Path=/jaehwa/**
+        - id : joonbum
+          uri : lb://joonbum
+          predicates:
+            - Path=/joonbum/**
+        - id : zuhee
+          uri : lb://zuhee
+          predicates:
+            - Path=/zuhee/**
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone : http://3.143.74.33:8761/eureka
+
+
